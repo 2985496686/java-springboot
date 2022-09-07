@@ -1,0 +1,31 @@
+
+
+#在无字符\的情况下，字符串可以不用加引号
+#当字符串中有\时我们需要使用引号，在单引号中，\会被当成普通字符处理，在双引号中，\会被当成转义字符处理
+
+persion:
+  #user-name等同于userName
+  user-name: zhangsan
+  boss: true
+  birth: 2003/07/04
+  age: 19
+  pet:
+    name: 小秋
+    weight: 7.5
+  interests: [敲代码, 打乒乓]
+  animal: [dog,cat]
+  #score: {math: [100, 21, 32],English: [100, 99, 98]}
+  score:
+    english:
+      first: 30
+      second: 40
+      third: 50
+    math: [131,140,148]
+    chinese: {first: 128,second: 136}
+  allPets:
+    dog:
+      - name: 小秋
+        weight: 12
+    cat:
+      - name: "小春\n"
+        weight: 21
