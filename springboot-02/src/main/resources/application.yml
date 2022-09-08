@@ -29,3 +29,9 @@ persion:
     cat:
       - name: "小春\n"
         weight: 21
+spring:
+  mvc:
+    static-path-pattern: /res/**
+  web:
+    resources:
+      static-locations: [classpath:/haha/]
