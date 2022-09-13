@@ -31,7 +31,9 @@ persion:
         weight: 21
 spring:
   mvc:
-    static-path-pattern: /res/**
+    hiddenmethod:
+      filter:
+        enabled: true
   web:
     resources:
       static-locations: [classpath:/haha/]

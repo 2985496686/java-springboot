@@ -15,7 +15,7 @@ import org.springframework.context.annotation.Configuration;
  *  proxyBeanMethods是@ Configuration的属性，表示：被@Bean标记的方法是否要被代理，默认为true
  *    Full(proxyBeanMethods = true)、【保证每个@Bean方法被调用多少次返回的组件都是单实例的】
  *    Lite(proxyBeanMethods = false)【每个@Bean方法被调用多少次返回的组件都是新创建的】
- *    组件依赖必须使用Full模式默认。其他默认是否Lite模式
+ *    组件依赖必须使用Full模式默认。
  *
  *    Full和Lite使用情况
  *    当组件之间无依赖关系，使用Lite可以不用创建代理，减少判断，加快程序启动

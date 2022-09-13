@@ -8,13 +8,14 @@ import org.springframework.util.Assert;
 /**
  *@ ConfigurationProperties：配置属性绑定，可以将properties文件中配置的信息对应到一个Bean中，其中prefix是key的前缀
  * 使用前提：这个Bean必须在IOC容器中存在
+ *
+ *
  * 如果想要将properties配置文件与第三方类库中的类对应，我们可以在配置类(只要是spring)上使用该注解@EnableConfigurationProperties，
  * @ EnableConfigurationProperties要与@ConfigurationProperties配合使用
- * 注意二者使用位置：@ConfigurationProperties要放在要绑定的类上，@ EnableConfigurationProperties要放在spring组件上
+ * 注意二者使用位置：@ConfigurationProperties要放在要绑定的类上(第三方类上带的有)，@ EnableConfigurationProperties要放在spring组件上
  * 例：@EnableConfigurationProperties(Assert.class)
- * 该注解有两个功能：
- * 1.将Assert注册到IOC容器当中
- * 2.提示spring容器进行配置属性绑定
+ * 该注解有主要功能：
+ * 将Assert注册到IOC容器当中
  */
 @Component
 @ConfigurationProperties(prefix = "car")
