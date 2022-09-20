@@ -10,7 +10,8 @@
     <input type="hidden" name="_method" value="delete">
     <input type="submit" value="delete-user">
 </form>
-<form action="/user" method="post">
+<form action="/user/1" method="post">
+    <input type="text" name="name">
     <input type="submit" value="post-user">
 </form>
 <form action="/user" method="post">
@@ -18,4 +19,15 @@
     <input type="submit" value="update-user">
 </form>
 </body>
+
+<form action="/user/test" method="post">
+    <input type="text" name="name" value="name">
+    <input type="email" name = "email" value="email">
+    <input type="text" name="pet" value="猫，20">
+    <!--
+    <input type="text" name="pet.name" value="petName">
+    <input type="text" name="pet.weight" value="20">
+    -->
+    <input type="submit" value="提交">
+</form>
 </html>

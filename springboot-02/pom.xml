@@ -34,6 +34,15 @@
             <artifactId>spring-boot-configuration-processor</artifactId>
             <optional>true</optional>
         </dependency>
+
+
+        <!--将对象转换为xml类型数据-->
+        <dependency>
+            <groupId>com.fasterxml.jackson.dataformat</groupId>
+            <artifactId>jackson-dataformat-xml</artifactId>
+            <version> 2.10.1</version>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -51,7 +60,7 @@
                     </excludes>
                 </configuration>
             </plugin>
-           </plugins>
+        </plugins>
     </build>
 
 </project>

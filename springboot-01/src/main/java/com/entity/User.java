@@ -1,8 +1,14 @@
 package com.entity;
 
+
+import org.springframework.validation.annotation.Validated;
+
+
 public class User {
     private String name;
 
+
+    private String eamil;
     private Pet pet;
 
     public String getName() {
