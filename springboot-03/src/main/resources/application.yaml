@@ -6,7 +6,7 @@ spring:
     url: jdbc:mysql://localhost:3306/study2?serverTimezone=UTC
 
 mybatis:
+  config-location: classpath:mybatis-config.xml # mybatis配置文件的路径
   mapper-locations: classpath:mapper/*.xml # mapper XML路径
   type-aliases-package: com.entity
-  configuration:
-    map-underscore-to-camel-case: true #下划线转换为驼峰
+
