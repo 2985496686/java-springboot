@@ -30,10 +30,4 @@ public class HelloController {
     public String testPojo(User user){
         return user.toString();
     }
-
-
-    @RequestMapping("/user/testResource")
-    public User testResouce(){
-        return new User();
-    }
 }

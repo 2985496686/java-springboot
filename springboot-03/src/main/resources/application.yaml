@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 111111
+    url: jdbc:mysql://localhost:3306/study2?serverTimezone=UTC
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml # mapper XML路径
+  type-aliases-package: com.entity
+  configuration:
+    map-underscore-to-camel-case: true #下划线转换为驼峰
