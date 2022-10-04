@@ -1,6 +1,7 @@
 import com.MainClass;
 import com.eneity.User;
 import com.mapper.UserMapper;
+import com.service.impl.UserServiceImpl;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -12,6 +13,9 @@ public class TestMybatis {
 
     @Autowired
     private  UserMapper userMapper;
+
+    @Autowired
+    private UserServiceImpl userService;
 
     @Test
     public void testGetUser(){
@@ -27,5 +31,10 @@ public class TestMybatis {
         userMapper.insertUser("李四");
         userMapper.insertUser("王五");
         userMapper.insertUser("刘六");
+    }
+
+    @Test
+    public void testTransaction(){
+        userService.insertTwo("joke","Mark");
     }
 }
